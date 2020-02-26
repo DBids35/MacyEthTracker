@@ -1,0 +1,14 @@
+<html>
+    <body >
+        <div style="text-align: center">
+            <h1> Macy owns .25 ETH, which is worth:</h1>
+            <h1 id="value"></h1>
+            <script>
+                fetch("https://api.coinmarketcap.com/v1/ticker/ethereum/")
+                    .then(data => data.json())
+                    .then(json => document.getElementById("value").innerHTML =json[0]['price_usd']/4)
+                
+            </script>
+        </div> 
+    </body>
+</html>
